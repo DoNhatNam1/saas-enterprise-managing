@@ -60,7 +60,7 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
         .join(', ')
 
   return (
-    <picture>
+    <picture className="grid place-items-center relative">
       <NextImage
         alt={alt || ''}
         className={cn(imgClassName)}
@@ -70,7 +70,7 @@ export const ImageMedia: React.FC<MediaProps> = (props) => {
         blurDataURL={placeholderBlur}
         priority={priority}
         quality={100}
-        loading={loading}
+        // loading={loading}
         sizes={sizes}
         src={src}
         width={!fill ? width : undefined}
