@@ -6,6 +6,7 @@ node_modules
 .env.example
 .next
 .vercel
+document
 
 # Payload default media upload directory
 public/media/
