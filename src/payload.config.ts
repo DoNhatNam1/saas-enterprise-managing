@@ -16,9 +16,12 @@ import { Header } from './Header/config'
 import { plugins } from './plugins'
 import { defaultLexical } from '@/fields/defaultLexical'
 import { getServerSideURL } from './utilities/getURL'
-import { Movies } from './collections/Movies'
-import { Authors } from './collections/Authors'
-import { Books } from './collections/Books'
+import resendAdapter from './utilities/resendAdapter'
+import { TenseUsers } from './collections/TenseUsers'
+import { BusinessTypes } from './collections/BusinessTypes'
+import { TableSpa } from './collections/TableSpa'
+import { TableNhaHang } from './collections/TableNhaHang'
+import { TableKhachSan } from './collections/TableKhachSan'
 
 const filename = fileURLToPath(import.meta.url)
 const dirname = path.dirname(filename)
@@ -27,8 +30,7 @@ export default buildConfig({
   admin: {
     components: {
       // The `BeforeLogin` component renders a message that you see while logging into your admin panel.
-      // Feel free to delete this at any time. Simply remove the line below and the import `BeforeLogin` statement on line 15.
-      beforeLogin: ['@/components/BeforeLogin'],
+      // Feel free to delete this at any time. Simp
       // The `BeforeDashboard` component renders the 'welcome' block that you see after logging into your admin panel.
       // Feel free to delete this at any time. Simply remove the line below and the import `BeforeDashboard` statement on line 15.
       beforeDashboard: ['@/components/BeforeDashboard'],
@@ -60,6 +62,7 @@ export default buildConfig({
       ],
     },
   },
+  email: resendAdapter(),
   // This config helps us configure global or default features that the other editors can inherit
   editor: defaultLexical,
   db: postgresAdapter({
@@ -67,7 +70,7 @@ export default buildConfig({
       connectionString: process.env.DATABASE_URI || '',
     },
   }),
-  collections: [Pages, Posts, Media, Categories, Users, Movies, Authors, Books],
+  collections: [Pages, Posts, Media, Categories, Users, TenseUsers, BusinessTypes, TableSpa, TableNhaHang, TableKhachSan],
   cors: [getServerSideURL()].filter(Boolean),
   globals: [Header, Footer],
   plugins: [

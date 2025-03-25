@@ -5,6 +5,7 @@ export default {
     './components/**/*.{ts,tsx}',
     './app/**/*.{ts,tsx}',
     './src/**/*.{ts,tsx}',
+    './emails/**/*.{ts,tsx}',
   ],
   darkMode: ['selector', '[data-theme="dark"]'],
   plugins: [require('tailwindcss-animate'), require('@tailwindcss/typography')],
@@ -92,7 +93,8 @@ export default {
       },
       fontFamily: {
         mono: ['var(--font-geist-mono)'],
-        sans: ['var(--font-geist-sans)'],
+        // sans: ['var(--font-geist-sans)'],
+        sans: ['var(--font-inter)'],
       },
       keyframes: {
         'accordion-down': {
@@ -110,7 +112,7 @@ export default {
             '--tw-prose-body': 'var(--text)',
             '--tw-prose-headings': 'var(--text)',
             h1: {
-              fontSize: '3.5rem',
+              fontSize: '2.5rem',
               fontWeight: 'normal',
               marginBottom: '0.25em',
             },

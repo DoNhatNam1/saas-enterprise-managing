@@ -21,6 +21,10 @@ import {
   PreviewField,
 } from '@payloadcms/plugin-seo/fields'
 import { getServerSideURL } from '@/utilities/getURL'
+import { CardBlock } from '../../blocks/CardBlock/config'
+import { Banner } from '@/blocks/Banner/config'
+import { ProductCategories } from '@/blocks/ProductCategoriesBlock/config'
+import { TitleBlock } from '@/blocks/TitleBlock/config'
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -76,7 +80,7 @@ export const Pages: CollectionConfig = {
             {
               name: 'layout',
               type: 'blocks',
-              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock],
+              blocks: [CallToAction, Content, MediaBlock, Archive, FormBlock, CardBlock, Banner, ProductCategories, TitleBlock],
               required: true,
             },
           ],

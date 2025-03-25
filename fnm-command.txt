@@ -1,0 +1,7 @@
+fnm env --use-on-cd | Out-String | Invoke-Expression
+
+fnm use
+
+fnm list
+
+fnm current

@@ -17,8 +17,8 @@ export const generateMeta = async (args: {
     `${getServerSideURL()}`
 
   const title = doc?.meta?.title
-    ? doc?.meta?.title + ' | Payload Website Template'
-    : 'Payload Website Template'
+    ? doc?.meta?.title + ' | Phần mềm quản lý'
+    : 'Nexus Website'
 
   return {
     description: doc?.meta?.description,

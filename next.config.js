@@ -20,6 +20,9 @@ const nextConfig = {
       }),
     ],
   },
+  experimental: {
+    authInterrupts: true,
+  },
   reactStrictMode: true,
   redirects,
 }

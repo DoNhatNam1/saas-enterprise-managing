@@ -8,13 +8,21 @@ import { CallToActionBlock } from '@/blocks/CallToAction/Component'
 import { ContentBlock } from '@/blocks/Content/Component'
 import { FormBlock } from '@/blocks/Form/Component'
 import { MediaBlock } from '@/blocks/MediaBlock/Component'
+import { CardBlock } from './CardBlock/Component'
+import { BannerBlock } from './Banner/Component'
+import { ProductCategoriesBlock } from './ProductCategoriesBlock/Component'
+import { TitleBlock } from './TitleBlock/Component'
 
-const blockComponents = {
+const blockComponents: { [key: string]: React.FC<any> } = {
   archive: ArchiveBlock,
+  banner: BannerBlock,
   content: ContentBlock,
   cta: CallToActionBlock,
   formBlock: FormBlock,
   mediaBlock: MediaBlock,
+  cardBlock: CardBlock,
+  prodCategoriesBlock: ProductCategoriesBlock,
+  titleBlock: TitleBlock,
 }
 
 export const RenderBlocks: React.FC<{
@@ -36,7 +44,6 @@ export const RenderBlocks: React.FC<{
             if (Block) {
               return (
                 <div className="my-16" key={index}>
-                  {/* @ts-expect-error */}
                   <Block {...block} />
                 </div>
               )

@@ -5,6 +5,22 @@ declare global {
       DATABASE_URI: string
       NEXT_PUBLIC_SERVER_URL: string
       VERCEL_PROJECT_PRODUCTION_URL: string
+      UPLOADTHING_SECRET: string
+      UPLOADTHING_APP_ID: string
+      UPLOADTHING_URL: string
+      RESEND_API_KEY: string
+      APPID: string
+      KEY1: string
+      KEY2: string
+      ZLP_MERCHANT_CALLBACK_URL: string
+      KINDE_CLIENT_ID: string
+      KINDE_CLIENT_SECRET: string
+      KINDE_ISSUER_URL: string
+      KINDE_SITE_URL: string
+      KINDE_POST_LOGOUT_REDIRECT_URL: string
+      KINDE_POST_LOGIN_REDIRECT_URL: string
+      RESEND_SENDER_NAME: string
+      RESEND_SENDER_EMAIL: string
     }
   }
 }

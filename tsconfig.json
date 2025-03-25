@@ -44,7 +44,7 @@
     ".next/types/**/*.ts",
     "redirects.js",
     "next.config.js"
-  ],
+, "open-browser.js"  ],
   "exclude": [
     "node_modules"
   ]
