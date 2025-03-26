@@ -3,7 +3,7 @@ import { getPayload } from 'payload'
 import configPromise from '@payload-config'
 import { redirect, unauthorized } from 'next/navigation'
 
-export async function checkAndRedirect() {
+export async function checkAndRedirect(currentPath: string) {
   const { getUser } = getKindeServerSession()
   const user = await getUser()
 
@@ -25,7 +25,7 @@ export async function checkAndRedirect() {
   })
 
   // Scenario 2: User has not completed registration
-  if (!userData.docs.length || !userData.docs[0].businessType) {
+  if ((!userData.docs.length || !userData.docs[0].businessType) && currentPath !== '/auth-callback') {
     // Redirect to /auth-callback to handle registration logic
     redirect('/auth-callback')
   }

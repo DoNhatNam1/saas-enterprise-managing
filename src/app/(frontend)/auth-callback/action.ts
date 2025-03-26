@@ -3,16 +3,11 @@
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server"
 import { getPayload } from 'payload'
 import configPromise from '@payload-config'
-import { redirect } from 'next/navigation'
 
 export async function getAuthStatus() {
   try {
     const { getUser } = getKindeServerSession()
     const user = await getUser()
-    
-    if (!user?.id || !user.email) {
-      redirect('/')
-    }
 
     const payload = await getPayload({ config: configPromise })
     const existingUser = await payload.find({
