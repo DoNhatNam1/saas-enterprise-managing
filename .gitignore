@@ -11,3 +11,4 @@ document
 # Payload default media upload directory
 public/media/
 terraform-deploy/
+.vercel

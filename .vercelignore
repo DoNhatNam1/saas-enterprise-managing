@@ -1,0 +1,9 @@
+# Exclude build and cache files
+.next/
+node_modules/
+
+# Exclude Terraform files
+terraform-deploy/
+
+# Exclude large media files
+public/media/Demo e-com.mp4

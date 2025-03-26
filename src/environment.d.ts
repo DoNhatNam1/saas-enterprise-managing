@@ -11,6 +11,7 @@ declare global {
       RESEND_API_KEY: string
       APPID: string
       KEY1: string
+      BLOB_READ_WRITE_TOKEN: string
       KEY2: string
       ZLP_MERCHANT_CALLBACK_URL: string
       KINDE_CLIENT_ID: string
